@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In It: quit porn with a partner</title>
+<meta name="description" content="In It pairs you with an accountability partner to quit porn. When an urge hits, a real person answers. Join the free waitlist.">
+<meta name="theme-color" content="#070A22">
+<meta property="og:title" content="In It: quitting porn is a boss fight. Don't play it solo.">
+<meta property="og:description" content="In It pairs you with an accountability partner to quit porn. When an urge hits, a real person answers. Join the free waitlist.">
+<meta property="og:image" content="assets/logo.webp">
+<link rel="icon" href="assets/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;1,700;1,800;1,900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#070A22}
+a{color:#F4F6FF}a:hover{color:#FFFFFF}
+.pg{--arena:#070A22;--panel:#0D1236;--line:rgba(167,175,216,0.16);--ink:#F4F6FF;--mist:#A7AFD8;--blue:#0052FF;--blue-deep:#0039B3;--crim:#E0283F;--streak:#FF2D55;--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-back:cubic-bezier(0.34,1.56,0.64,1);font-family:'Barlow',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:#070A22;font-size:17px;line-height:1.55;overflow:hidden;overflow:clip;-webkit-font-smoothing:antialiased;position:relative}
+.pg *{box-sizing:border-box}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
+.st1{stop-color:#8FD0FF}.st2{stop-color:#2F6BFF}.st3{stop-color:#4C6BFF}.st4{stop-color:#1B2A8F}
+.fl1{stop-color:#FF5C82}.fl2{stop-color:#FF1F4B}.fl3{stop-color:#FFC04D}.fl4{stop-color:#FF6A1F}
+.gr1{stop-color:#4A5590}.gr2{stop-color:#262E66}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.disp{font-family:'Barlow Condensed','Barlow',sans-serif;font-style:italic;font-weight:900;text-transform:uppercase;letter-spacing:-0.005em;line-height:0.92;text-wrap:balance;margin:0}
+.tnum{font-variant-numeric:tabular-nums}
+.ic{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.gs{fill:none;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.dk{fill:none;stroke:#0A0F33;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+:focus-visible{outline:2px solid #FFFFFF;outline-offset:3px}
+
+/* HUD */
+.hud{position:sticky;top:0;z-index:30;background:rgba(7,10,34,0.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hud-in{display:flex;align-items:center;gap:18px;height:76px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:19px;flex:none}
+.brand img{width:34px;height:auto;display:block}
+.bars{flex:1;min-width:0;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:14px;align-items:center}
+.bar{display:flex;flex-direction:column;gap:5px;min-width:0}
+.bar .nm{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase}
+.bar.r .nm{text-align:right}
+.track{display:block;height:16px;transform:skewX(-18deg);background:#151A44;box-shadow:inset 0 0 0 2px #2A3270;overflow:hidden;position:relative}
+.fill,.ghost{position:absolute;inset:2px;transform-origin:0 50%}
+.bar.l .fill{background:linear-gradient(90deg,#CFDFFC,#FFFFFF)}
+.bar.r .fill,.bar.r .ghost{transform-origin:100% 50%}
+.bar.r .ghost{background:#FFFFFF;transition:transform 600ms var(--ease-out) 500ms}
+.bar.r .fill{background:linear-gradient(90deg,#FF5A6C,var(--crim));transition:transform 320ms var(--ease-out)}
+.hp85 .fill,.hp85 .ghost{transform:scaleX(0.85)}.hp72 .fill,.hp72 .ghost{transform:scaleX(0.72)}.hp66 .fill,.hp66 .ghost{transform:scaleX(0.66)}.hp60 .fill,.hp60 .ghost{transform:scaleX(0.6)}.hp45 .fill,.hp45 .ghost{transform:scaleX(0.45)}.hp33 .fill,.hp33 .ghost{transform:scaleX(0.33)}.hp30 .fill,.hp30 .ghost{transform:scaleX(0.3)}.hp15 .fill,.hp15 .ghost{transform:scaleX(0.15)}.hp0 .fill,.hp0 .ghost{transform:scaleX(0)}
+.bar.r .nm{transition:color 300ms ease}
+.bar.r.hp0 .nm{color:#FF7484}
+.vsb{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:24px;line-height:1;letter-spacing:-0.01em;color:#FFFFFF;padding:0 4px}
+
+/* buttons */
+.gbtn{appearance:none;border:0;cursor:pointer;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;text-decoration:none;color:#FFFFFF;background:none;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:800;font-size:21px;letter-spacing:0.02em;text-transform:uppercase;white-space:nowrap;isolation:isolate;transition:transform 140ms var(--ease-out)}
+.gbtn::before{content:'';position:absolute;inset:0;z-index:-1;transform:skewX(-14deg);background:linear-gradient(180deg,#2D6BFF 0%,#0052FF 60%,#0047E0 100%);box-shadow:0 4px 0 var(--blue-deep),0 14px 30px -12px rgba(0,82,255,0.8);transition:box-shadow 140ms var(--ease-out),filter 200ms ease}
+.gbtn:hover{color:#FFFFFF}
+.gbtn:active{transform:translateY(4px)}
+.gbtn:active::before{box-shadow:0 0 0 var(--blue-deep),0 8px 20px -12px rgba(0,82,255,0.7)}
+.gbtn:disabled{cursor:default}
+.gbtn:disabled::before{background:#232A66;box-shadow:0 4px 0 #161C4A}
+.gbtn.sm{height:42px;padding:0 20px;font-size:16px;flex:none}
+@media (hover:hover) and (pointer:fine){.gbtn:not(:disabled):hover::before{filter:brightness(1.12)}}
+.lnk{appearance:none;border:0;background:none;color:var(--ink);font:inherit;cursor:pointer;display:inline-flex;align-items:center;height:44px;padding:0 4px;font-weight:600;text-decoration:none;border-bottom:1px solid transparent;transition:border-color 200ms ease}
+@media (hover:hover) and (pointer:fine){.lnk:hover{border-bottom-color:rgba(244,246,255,0.5)}}
+
+/* title stage */
+.stage{position:relative;padding:72px 0 40px;overflow:hidden}
+.side-l{position:absolute;left:-12%;top:20%;bottom:0;width:42%;background:radial-gradient(55% 50% at 50% 70%,rgba(0,82,255,0.45) 0%,rgba(0,82,255,0) 72%);pointer-events:none}
+.side-r{position:absolute;right:-12%;top:20%;bottom:0;width:42%;background:radial-gradient(55% 50% at 50% 70%,rgba(224,40,63,0.38) 0%,rgba(224,40,63,0) 72%);pointer-events:none}
+.side-l,.side-r{-webkit-mask-image:linear-gradient(180deg,#000 50%,transparent 100%);mask-image:linear-gradient(180deg,#000 50%,transparent 100%)}
+.title{position:relative;text-align:center;z-index:3}
+.h1{font-size:clamp(54px,7.2vw,104px)}
+.h1 .ln{display:block}
+.h1 .ln2{color:#CFDFFC}
+.arena{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px) minmax(0,1fr);align-items:end;gap:0 12px;margin-top:-6px}
+.fighter{margin:0;position:relative;display:flex;flex-direction:column;align-items:center}
+.fighter .body{position:relative;height:520px;display:flex;align-items:flex-end;justify-content:center}
+.fighter img{height:100%;width:auto;display:block}
+.fighter.p2 .body{transform:scaleX(-1)}
+.plate{margin-top:14px;display:flex;align-items:baseline;gap:10px;padding:8px 20px;transform:skewX(-14deg);background:rgba(13,18,54,0.9);box-shadow:inset 0 0 0 1px rgba(167,175,216,0.25)}
+.plate > *{transform:skewX(14deg)}
+.plate b{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:26px;letter-spacing:0.02em}
+.plate span{font-size:14px;color:var(--mist);font-weight:500}
+.plate.boss b{color:#FF7484}
+.mid{display:flex;flex-direction:column;align-items:center;text-align:center;padding-bottom:70px}
+.vs{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:150px;line-height:0.8;color:#FFFFFF;letter-spacing:-0.02em;text-shadow:0 8px 0 rgba(0,57,179,0.9)}
+.sub{margin:30px 0 26px;font-size:19px;line-height:1.5;color:#D3D8F2;max-width:22em}
+.cta-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 20px}
+
+/* story */
+.story{display:grid;grid-template-columns:280px minmax(0,1fr);gap:0 64px;padding-top:120px;position:relative}
+.rail{position:sticky;top:120px;align-self:start;padding-top:40px}
+.rail-list{list-style:none;margin:0;padding:0 0 0 26px;display:flex;flex-direction:column;gap:22px;position:relative}
+.rail-list::before{content:'';position:absolute;left:4px;top:6px;bottom:6px;width:2px;background:#1C2257}
+.prog{position:absolute;left:4px;top:6px;bottom:6px;width:2px;background:#FFFFFF;transform-origin:50% 0;transform:scaleY(var(--p,0));transition:transform 500ms var(--ease-out)}
+.pr0{--p:0.08;--pm:0.05}.pr1{--p:0.22;--pm:0.14}.pr2{--p:0.36;--pm:0.26}.pr3{--p:0.55;--pm:0.41}.pr4{--p:0.72;--pm:0.56}.pr5{--p:1;--pm:1}
+.ri{position:relative;display:flex;flex-direction:column;gap:2px;color:#5D6699;transition:color 300ms ease}
+.ri::before{content:'';position:absolute;left:-27px;top:8px;width:12px;height:12px;border-radius:999px;background:#070A22;box-shadow:inset 0 0 0 2px #2A3270;transition:background-color 300ms ease,box-shadow 300ms ease}
+.ri b{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:16px;letter-spacing:0.06em;text-transform:uppercase}
+.ri span{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:34px;line-height:1;text-transform:uppercase}
+.ri.done{color:#8C95C6}
+.ri.done::before{background:#3D7BFF;box-shadow:none}
+.ri.on{color:#FFFFFF}
+.ri.on::before{background:#FFFFFF;box-shadow:0 0 0 5px rgba(255,255,255,0.15)}
+.steps{display:flex;flex-direction:column}
+.step{min-height:560px;display:flex;flex-direction:column;justify-content:center;padding:40px 0;opacity:0.12;transform:translateY(36px);filter:blur(4px);transition:opacity 700ms var(--ease-out),transform 800ms var(--ease-out),filter 700ms var(--ease-out)}
+.step.seen{opacity:1;transform:none;filter:blur(0)}
+.step.tall{min-height:640px}
+.step.tight{min-height:0;padding:28px 0}
+.step.tight.first{padding-top:40px}
+.h2{font-size:clamp(44px,5.4vw,80px)}
+.lede{max-width:34em;margin:24px 0 0;font-size:19px;color:#D3D8F2}
+.lede strong{color:var(--ink);font-weight:700}
+.quote{margin:0;max-width:22em;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:800;font-size:clamp(34px,3.6vw,54px);line-height:1.05;text-transform:none;color:var(--ink)}
+.quote cite{display:block;margin-top:18px;font-family:'Barlow',sans-serif;font-style:normal;font-weight:500;font-size:15px;color:var(--mist)}
+.lust-laugh{position:relative;height:500px;display:flex;align-items:center;justify-content:center}
+.lust-laugh::before{content:'';position:absolute;left:10%;right:10%;top:10%;bottom:0;background:radial-gradient(50% 50% at 50% 55%,rgba(224,40,63,0.5),rgba(224,40,63,0) 70%)}
+.lust-laugh img{position:relative;height:440px;width:auto;transform-origin:50% 80%}
+.ha{position:absolute;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:56px;line-height:1;color:#FF5A6C;opacity:0}
+.ha.a{left:6%;top:16%}.ha.b{right:8%;top:8%;font-size:72px}.ha.c{right:2%;bottom:24%;font-size:44px}
+
+/* icon grid cards */
+.card{margin-top:40px;padding:34px;border-radius:24px;background:linear-gradient(180deg,#10163F 0%,#0B1034 100%);border:1px solid var(--line);position:relative;overflow:hidden}
+.card-h{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:30px}
+.tag{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;transform:skewX(-14deg);background:var(--blue)}
+.tag > *{transform:skewX(14deg)}
+.tag b{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:19px;letter-spacing:0.04em;text-transform:uppercase}
+.tag.alt{background:#232A66}
+.card-mascot{position:absolute;right:26px;top:16px;height:150px;width:auto;opacity:0;transform:translateY(20px) rotate(4deg);transition:opacity 500ms var(--ease-out) 300ms,transform 650ms var(--ease-back) 300ms}
+.step.seen .card-mascot{opacity:1;transform:none}
+.igrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:34px 40px;position:relative}
+.it svg{display:block;width:40px;height:40px;margin-bottom:18px}
+.it b{display:block;font-size:24px;line-height:1.12;font-weight:600;letter-spacing:-0.01em;max-width:9em}
+.it span{display:block;margin-top:10px;font-size:15px;line-height:1.45;color:#9CA4CC;max-width:17em}
+.igrid .it{opacity:0;transform:translateY(14px);transition:opacity 500ms var(--ease-out),transform 600ms var(--ease-out)}
+.step.seen .igrid .it{opacity:1;transform:none}
+.step.seen .igrid .it:nth-child(2){transition-delay:80ms}.step.seen .igrid .it:nth-child(3){transition-delay:160ms}.step.seen .igrid .it:nth-child(4){transition-delay:240ms}
+
+/* combo */
+.combo{margin-top:40px;display:flex;flex-wrap:wrap;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#10163E 0%,#0A0E2C 100%);border:1px solid var(--line)}
+.panel{flex:1 1 320px;min-width:0;padding:32px;display:flex;flex-direction:column;gap:18px}
+.chk{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.row{display:flex;align-items:center;gap:12px;font-weight:600;color:#6E77A8;transition:color 300ms ease}
+.row i{width:26px;height:26px;display:grid;place-items:center;flex:none;transform:skewX(-12deg);box-shadow:inset 0 0 0 2px #2A3270;color:transparent;transition:background-color 300ms ease,box-shadow 300ms ease,color 300ms ease}
+.row i svg{transform:skewX(12deg)}
+.row.now{color:#FFFFFF}
+.row.now i{box-shadow:inset 0 0 0 2px #FFFFFF}
+.row.done{color:#FFFFFF}
+.row.done i{background:#FFFFFF;box-shadow:none;color:#070A22}
+.chat{display:flex;flex-direction:column;gap:8px;min-height:104px}
+.bub{max-width:86%;padding:10px 14px;border-radius:18px;font-size:15px;line-height:1.4;opacity:0;transform:translateY(8px);transition:opacity 320ms var(--ease-out),transform 320ms var(--ease-out)}
+.bub.me{align-self:flex-end;background:var(--blue);color:#FFFFFF;border-bottom-right-radius:5px}
+.bub.them{align-self:flex-start;background:#1C2468;border-bottom-left-radius:5px}
+.bub.show{opacity:1;transform:none}
+.bub.them.show{transition-delay:700ms}
+.status{margin:0;min-height:24px;color:var(--mist);font-size:15px}
+.note{margin:0;font-size:14px;color:#8C95C6}
+.ring{flex:1 1 380px;min-width:0;position:relative;height:500px;overflow:hidden;background:radial-gradient(70% 50% at 70% 100%,rgba(224,40,63,0.22),rgba(224,40,63,0) 70%),radial-gradient(60% 50% at 20% 100%,rgba(0,82,255,0.25),rgba(0,82,255,0) 70%)}
+.ring-hp{position:absolute;left:30px;right:30px;top:26px;display:flex;flex-direction:column;gap:6px}
+.ring-hp .nm{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:18px;text-align:right;color:#FF7484;letter-spacing:0.04em}
+.ring-hp .track{height:22px}
+.ring-hp .fill,.ring-hp .ghost{transform-origin:100% 50%}
+.ring-hp .ghost{background:#FFFFFF;transition:transform 600ms var(--ease-out) 450ms}
+.ring-hp .fill{background:linear-gradient(90deg,#FF5A6C,var(--crim));transition:transform 280ms var(--ease-out)}
+.hits{position:absolute;left:30px;top:80px;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:42px;line-height:1;text-transform:uppercase;color:#FFFFFF;text-shadow:0 4px 0 #0039B3}
+.hits small{display:block;font-size:19px;color:var(--mist);text-shadow:none}
+.hits.pA{animation:popA 320ms var(--ease-back)}.hits.pB{animation:popB 320ms var(--ease-back)}
+@keyframes popA{from{transform:scale(1.35);opacity:0.4}to{transform:none;opacity:1}}
+@keyframes popB{from{transform:scale(1.35);opacity:0.4}to{transform:none;opacity:1}}
+.foe{position:absolute;right:8%;bottom:26px;height:340px;transform-origin:50% 100%}
+.foe img{height:100%;width:auto;display:block;transform:scaleX(-1)}
+.foe.hitA{animation:hitA 360ms var(--ease-out)}.foe.hitB{animation:hitB 360ms var(--ease-out)}
+@keyframes hitA{0%{transform:none;filter:brightness(2.3)}25%{transform:translateX(18px)}50%{transform:translateX(-10px);filter:brightness(1)}75%{transform:translateX(5px)}100%{transform:none}}
+@keyframes hitB{0%{transform:none;filter:brightness(2.3)}25%{transform:translateX(18px)}50%{transform:translateX(-10px);filter:brightness(1)}75%{transform:translateX(5px)}100%{transform:none}}
+.foe.down{animation:down 720ms 200ms var(--ease-out) both}
+@keyframes down{0%{transform:none;filter:brightness(2.4)}30%{transform:translateX(34px) rotate(7deg)}100%{transform:translate(90px,40px) rotate(20deg);opacity:0}}
+.ally{position:absolute;left:4%;bottom:26px;height:300px;width:320px;pointer-events:none}
+.ally img{position:absolute;left:0;bottom:0;height:100%;width:auto;opacity:0;transform:translateX(-80px)}
+.ally.punch .ip{animation:lunge 520ms var(--ease-out) both}
+.ally.kick .ik{animation:lunge 520ms var(--ease-out) both}
+@keyframes lunge{0%{opacity:0;transform:translateX(-90px)}55%{opacity:1;transform:translateX(22px)}100%{opacity:1;transform:translateX(0)}}
+.kostamp{position:absolute;left:50%;top:40%;margin-left:-150px;width:300px;text-align:center;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:150px;line-height:0.8;color:#FFFFFF;text-shadow:0 8px 0 #0039B3;opacity:0;transform:scale(1.5);pointer-events:none}
+.kostamp.in{animation:stamp 520ms 520ms var(--ease-back) both}
+@keyframes stamp{from{opacity:0;transform:scale(1.5)}to{opacity:1;transform:none}}
+
+/* streaks */
+.sec{padding-top:150px;position:relative}
+.quest{margin-top:44px;display:flex;flex-wrap:wrap;gap:40px 56px;align-items:center;padding:36px;border-radius:24px;background:linear-gradient(180deg,#10163F 0%,#0B1034 100%);border:1px solid var(--line)}
+.q-main{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:26px}
+.flame-row{display:flex;align-items:center;gap:22px}
+.flame{width:84px;height:104px;flex:none;overflow:visible;filter:drop-shadow(0 10px 18px rgba(255,45,85,0.35))}
+.flame .fo,.flame .fi,.flame .fc{transform-box:fill-box;transform-origin:50% 100%}
+.flame .em{opacity:0;fill:#FFB04D;transform-box:fill-box;transform-origin:50% 50%}
+.flame.bA{animation:bumpA 600ms var(--ease-back)}.flame.bB{animation:bumpB 600ms var(--ease-back)}
+@keyframes bumpA{0%{transform:scale(0.86)}60%{transform:scale(1.14)}100%{transform:none}}
+@keyframes bumpB{0%{transform:scale(0.86)}60%{transform:scale(1.14)}100%{transform:none}}
+.count b{display:block;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:96px;line-height:0.85;color:var(--streak)}
+.count > span{display:block;margin-top:6px;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:800;font-size:24px;text-transform:uppercase;color:#FF6F8C;letter-spacing:0.02em}
+.week{display:flex;flex-direction:column;gap:10px}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));text-align:center;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:800;font-size:17px;color:#6E77A8;text-transform:uppercase}
+.days .td{color:var(--streak)}
+.pill{position:relative;height:56px;border-radius:999px;background:#1A2058;box-shadow:inset 0 0 0 2px #262E6E}
+.pill-fill{position:absolute;inset:0;border-radius:999px;background:linear-gradient(180deg,#FF8A3D 0%,#FF4A3D 55%,#FF2D55 100%);box-shadow:inset 0 0 0 3px #FF1F4B,inset 0 4px 0 rgba(255,255,255,0.22);transition:clip-path 700ms var(--ease-out)}
+.slots{position:absolute;inset:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));align-items:center;justify-items:center}
+.sl{width:30px;height:30px;display:grid;place-items:center;color:rgba(167,175,216,0.25)}
+.sl.done{color:#2A0A12}
+.sl.half{color:#FF6F8C}
+.sl.today{position:relative}
+.sl.today::after{content:'';position:absolute;inset:-6px;border-radius:999px;box-shadow:inset 0 0 0 2px rgba(255,111,140,0.5)}
+.sl.done.today::after{display:none}
+.q-side{flex:0 1 300px;min-width:0;display:flex;flex-direction:column;align-items:center;gap:18px}
+.q-side img{height:240px;width:auto;display:block}
+.who{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.chip{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 14px;border-radius:999px;background:#151A44;box-shadow:inset 0 0 0 1px #2A3270;font-size:14px;font-weight:600;color:#8C95C6;transition:background-color 300ms ease,color 300ms ease,box-shadow 300ms ease}
+.chip svg{width:20px;height:20px}
+.chip.ok{background:rgba(255,45,85,0.14);box-shadow:inset 0 0 0 1px rgba(255,90,120,0.6);color:#FFFFFF}
+.typing{display:inline-flex;gap:3px}
+.typing i{width:5px;height:5px;border-radius:999px;background:#8C95C6;animation:dot 1s ease-in-out infinite}
+.typing i:nth-child(2){animation-delay:150ms}.typing i:nth-child(3){animation-delay:300ms}
+@keyframes dot{0%,100%{opacity:0.3;transform:none}50%{opacity:1;transform:translateY(-3px)}}
+.q-act{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px}
+.d5 .pill-fill{clip-path:inset(0 28.57% 0 0 round 999px)}
+.d6 .pill-fill{clip-path:inset(0 14.29% 0 0 round 999px)}
+
+.two{display:flex;flex-wrap:wrap;gap:48px 72px;align-items:flex-start}
+.two > *{flex:1 1 420px;min-width:0}
+.story-txt{max-width:36em;margin-top:24px;font-size:19px;color:#D3D8F2}
+.story-txt p{margin:0 0 16px}
+.sign{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:28px;color:var(--ink);text-transform:uppercase}
+.runs{display:flex;flex-direction:column;gap:20px}
+.run{padding:26px 28px;border-radius:24px;background:linear-gradient(180deg,#10163F 0%,#0B1034 100%);border:1px solid var(--line);display:flex;flex-direction:column;gap:18px}
+.run .flame-row{gap:16px}
+.run .flame{width:54px;height:68px}
+.run .count b{font-size:64px}
+.run .count > span{font-size:18px}
+.run.solo .count b{color:#7782B8}
+.run.solo .count > span{color:#8C95C6}
+.run.solo .flame{filter:none}
+.pill.sm{height:40px}
+.pill.sm .slots{grid-template-columns:repeat(7,minmax(0,1fr))}
+.pill.sm .sl{width:20px;height:20px}
+.run .pill-fill{clip-path:inset(0 100% 0 0 round 999px);transition:clip-path 900ms var(--ease-out)}
+.runs.seen .solo .pill-fill{clip-path:inset(0 42.86% 0 0 round 999px)}
+.runs.seen .coop .pill-fill{clip-path:inset(0 0 0 0 round 999px);transition-duration:1500ms;transition-delay:300ms}
+.solo .pill-fill{background:linear-gradient(180deg,#5A6499,#3A4478);box-shadow:inset 0 0 0 2px #2F386C}
+.runs .sl.done{color:transparent;transition:color 200ms ease}
+.runs.seen .solo .sl.done{color:#1A2058}
+.runs.seen .coop .sl.done{color:#2A0A12}
+.runs.seen .solo .sl:nth-child(2){transition-delay:220ms}.runs.seen .solo .sl:nth-child(3){transition-delay:440ms}.runs.seen .solo .sl:nth-child(4){transition-delay:660ms}
+.runs.seen .coop .sl:nth-child(1){transition-delay:350ms}.runs.seen .coop .sl:nth-child(2){transition-delay:560ms}.runs.seen .coop .sl:nth-child(3){transition-delay:770ms}.runs.seen .coop .sl:nth-child(4){transition-delay:980ms}.runs.seen .coop .sl:nth-child(5){transition-delay:1190ms}.runs.seen .coop .sl:nth-child(6){transition-delay:1400ms}.runs.seen .coop .sl:nth-child(7){transition-delay:1610ms}
+.run.coop .flame{transform:scale(0.72);opacity:0.45;transition:transform 700ms var(--ease-back) 300ms,opacity 400ms ease 300ms}
+.runs.seen .coop .flame{transform:none;opacity:1}
+.run p{margin:0;font-size:15px;color:#9CA4CC}
+
+.rules{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px 48px;max-width:1000px}
+.rules li{display:flex;gap:14px;align-items:flex-start}
+.rules .ic{color:#FFFFFF;margin-top:3px}
+.rules b{display:block;font-size:18px;font-weight:700}
+.rules span{display:block;color:var(--mist);font-size:16px}
+
+.fin{position:relative;margin-top:150px;padding:110px 0 0;overflow:hidden;background:radial-gradient(70% 55% at 50% 100%,rgba(0,82,255,0.45) 0%,rgba(0,82,255,0) 75%)}
+.fin-in{position:relative;text-align:center;z-index:2}
+.fin-in .lede{margin:22px auto 30px}
+.fin-scene{position:relative;height:460px;margin-top:20px}
+.fin-scene .fr{position:absolute;left:50%;bottom:0;height:440px;margin-left:-260px;transform-origin:50% 100%}
+.fin-scene .ls{position:absolute;left:50%;bottom:24px;width:170px;margin-left:80px;transform:rotate(22deg);opacity:0.75;filter:saturate(0.8)}
+.fin-scene .ko-big{position:absolute;left:50%;bottom:170px;margin-left:110px;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:110px;line-height:0.8;color:#FFFFFF;text-shadow:0 6px 0 #0039B3}
+.foot{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;padding:28px 32px 40px;max-width:1240px;margin:0 auto;border-top:1px solid var(--line);font-size:14px;color:var(--mist);position:relative;z-index:2;background:#070A22}
+
+@media (prefers-reduced-motion:no-preference){
+.fighter.p1 .body{animation:inL 800ms 200ms var(--ease-out) both}
+.fighter.p2{animation:inR 800ms 200ms var(--ease-out) both}
+@keyframes inL{from{opacity:0;transform:translateX(-80px)}to{opacity:1;transform:none}}
+@keyframes inR{from{opacity:0;transform:translateX(80px)}to{opacity:1;transform:none}}
+.vs{animation:slam 520ms 750ms var(--ease-back) both}
+@keyframes slam{from{opacity:0;transform:scale(1.6)}to{opacity:1;transform:none}}
+.h1 .ln{animation:rise 800ms var(--ease-out) both}
+.h1 .ln2{animation-delay:100ms}
+.sub,.cta-row{animation:rise 800ms 950ms var(--ease-out) both}
+@keyframes rise{from{opacity:0;transform:translateY(20px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+.fighter.p1 img,.fin-scene .fr{animation:breathe 4.6s 1.6s ease-in-out infinite alternate;transform-origin:50% 100%}
+@keyframes breathe{from{transform:none}to{transform:scale(1.012,1.02)}}
+.step.seen .lust-laugh img{animation:cackle 1.8s 400ms infinite}
+@keyframes cackle{0%,46%,100%{transform:none}6%{transform:rotate(-4deg) translateY(-6px)}12%{transform:rotate(3deg) translateY(0)}18%{transform:rotate(-4deg) translateY(-7px)}24%{transform:rotate(3deg) translateY(0)}30%{transform:rotate(-3deg) translateY(-5px)}36%{transform:rotate(2deg)}}
+.step.seen .ha{animation:haUp 1.8s ease-out infinite}
+.step.seen .ha.b{animation-delay:200ms}.step.seen .ha.c{animation-delay:420ms}
+@keyframes haUp{0%{opacity:0;transform:translateY(10px) scale(0.9)}12%{opacity:1;transform:none}40%{opacity:0;transform:translateY(-24px)}100%{opacity:0}}
+}
+/* streak flames burn and streak bars fill for everyone: small, in-place motion Arman asked for */
+.burn .fo{animation:flick 1.5s ease-in-out infinite}
+.burn .fi{animation:flick2 1.05s ease-in-out infinite}
+.burn .fc{animation:core 0.9s ease-in-out infinite alternate}
+.burn .em{animation:ember 1.8s ease-out infinite}
+.burn .em.e2{animation-delay:600ms;animation-duration:2.1s}.burn .em.e3{animation-delay:1.2s;animation-duration:1.6s}
+@keyframes flick{0%,100%{transform:none}20%{transform:scale(0.96,1.05) skewX(-3deg)}45%{transform:scale(1.03,0.96) skewX(2deg)}70%{transform:scale(0.98,1.06) skewX(3deg)}85%{transform:scale(1.01,0.98) skewX(-1deg)}}
+@keyframes flick2{0%,100%{transform:none}30%{transform:scale(1.06,0.92) skewX(4deg)}60%{transform:scale(0.94,1.1) skewX(-4deg)}}
+@keyframes core{from{transform:none}to{transform:scale(0.84,1.12)}}
+@keyframes ember{0%{opacity:0;transform:none}15%{opacity:1}100%{opacity:0;transform:translate(5px,-38px) scale(0.3)}}
+@media (prefers-reduced-motion:reduce){
+.step{transform:none;filter:none;transition:opacity 200ms ease}
+.foe.hitA,.foe.hitB,.hits.pA,.hits.pB,.flame.bA,.flame.bB{animation:none}
+.flame.burn.bA .fo,.flame.burn.bB .fo{animation:flick 1.5s ease-in-out infinite}
+.foe.down{animation:none;opacity:0}
+.ally.punch .ip,.ally.kick .ik{animation:none;opacity:1;transform:none}
+.kostamp.in{animation:none;opacity:1;transform:none}
+.typing i{animation:none;opacity:0.8}
+}
+@media (max-width:900px){
+.wrap{padding:0 18px}
+.hud-in{gap:10px;height:66px}
+.brand span{display:none}
+.vsb{font-size:18px}
+.gbtn.sm{display:none}
+.stage{padding-top:44px}
+.arena{grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-top:20px}
+.mid{grid-column:1 / -1;grid-row:2;padding-bottom:20px}
+.fighter .body{height:300px}
+.plate b{font-size:20px}
+.plate span{display:none}
+.vs{font-size:90px;margin-top:20px}
+.story{grid-template-columns:minmax(0,1fr);padding-top:70px}
+.rail{top:66px;z-index:20;margin:0 -18px;padding:10px 18px;background:rgba(7,10,34,0.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.rail-list{flex-direction:row;gap:8px;padding:18px 0 0}
+.rail-list::before{left:0;right:0;top:4px;bottom:auto;width:auto;height:2px}
+.prog{left:0;right:0;top:4px;bottom:auto;width:auto;height:2px;transform-origin:0 50%;transform:scaleX(var(--pm,0))}
+.ri{flex:1;min-width:0}
+.ri::before{left:0;top:-18px;width:10px;height:10px}
+.ri.on::before{box-shadow:0 0 0 4px rgba(255,255,255,0.15)}
+.ri b{font-size:12px}
+.ri span{font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.step,.step.tall{min-height:0;padding:56px 0}
+.step.tight{padding:22px 0}
+.step.tight.first{padding-top:36px}
+.lust-laugh{height:340px}
+.lust-laugh img{height:300px}
+.card{padding:24px 20px}
+.card-mascot{height:96px;right:14px}
+.ring{height:400px}
+.foe{height:260px;right:4%}
+.ally{height:230px}
+.kostamp{font-size:100px}
+.sec{padding-top:96px}
+.quest{padding:24px 18px}
+.flame{width:64px;height:80px}
+.count b{font-size:72px}
+.pill{height:46px}
+.sl{width:22px;height:22px}
+.q-side img{height:180px}
+.fin-scene{height:330px}
+.fin-scene .fr{height:300px;margin-left:-180px}
+.fin-scene .ls{width:120px;margin-left:40px}
+.fin-scene .ko-big{font-size:70px;margin-left:50px;bottom:120px}
+}
+</style>
+</head>
+<body>
+<div class="pg" data-root>
+
+<svg class="defs" aria-hidden="true" width="0" height="0">
+<defs>
+<linearGradient id="gA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="st1"></stop><stop offset="1" class="st2"></stop></linearGradient>
+<linearGradient id="gB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="st3"></stop><stop offset="1" class="st4"></stop></linearGradient>
+<linearGradient id="gF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="fl1"></stop><stop offset="1" class="fl2"></stop></linearGradient>
+<linearGradient id="gF2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="fl3"></stop><stop offset="1" class="fl4"></stop></linearGradient>
+<linearGradient id="gG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="gr1"></stop><stop offset="1" class="gr2"></stop></linearGradient>
+</defs>
+</svg>
+
+<div class="hud">
+<div class="wrap hud-in">
+<a class="brand" href="#top" aria-label="In It, back to top"><img src="assets/logo.webp" alt=""><span>In It</span></a>
+<div class="bars" aria-hidden="true">
+<div class="bar l"><span class="nm">You + partner</span><span class="track"><span class="fill"></span></span></div>
+<span class="vsb">VS</span>
+<div data-b-class="hudCls"><span class="nm"><span data-t="hudName"></span></span><span class="track"><span class="ghost"></span><span class="fill"></span></span></div>
+</div>
+<a class="gbtn sm" href="https://tally.so/r/WJrEle" target="_blank" rel="noopener">Join the waitlist</a>
+</div>
+</div>
+
+<section class="stage" id="top" data-hp="100">
+<div class="side-l" aria-hidden="true"></div>
+<div class="side-r" aria-hidden="true"></div>
+<div class="wrap title">
+<h1 class="disp h1"><span class="ln">Quitting porn is a boss fight.</span><span class="ln ln2">Don't play it solo.</span></h1>
+</div>
+<div class="wrap arena">
+<figure class="fighter p1"><div class="body"><img src="assets/freed-full.webp" alt="Freed, the In It wolf"></div><figcaption class="plate"><b>Freed</b><span>Your big brother</span></figcaption></figure>
+<div class="mid">
+<span class="vs" aria-hidden="true">VS</span>
+<p class="sub">In It pairs you with an accountability partner to quit porn. When an urge hits, a real person answers. Free while we test.</p>
+<div class="cta-row">
+<a class="gbtn" href="https://tally.so/r/WJrEle" target="_blank" rel="noopener">Join the waitlist</a>
+<a class="lnk" href="#rounds">See the rounds</a>
+</div>
+</div>
+<figure class="fighter p2"><div class="body"><img src="assets/lust-full.webp" alt="Lust, the shadow creature you beat"></div><figcaption class="plate boss"><b>Lust</b><span>The boss</span></figcaption></figure>
+</div>
+</section>
+
+<section class="wrap story" id="rounds">
+<aside class="rail" aria-label="Rounds">
+<div class="rail-list">
+<span data-b-class="progCls"></span>
+<div data-b-class="ri0"><b>Round 1</b><span>Solo</span></div>
+<div data-b-class="ri1"><b>Round 2</b><span>Player 2 joins</span></div>
+<div data-b-class="ri2"><b>Round 3</b><span>The urge</span></div>
+</div>
+</aside>
+<div class="steps">
+
+<div data-b-class="s0" data-s="0" data-hp="100">
+<h2 class="disp h2">Alone at night, Lust wins.</h2>
+<p class="lede">We read <strong>3,558 public posts</strong> from men trying to quit. The hardest moment they named most was night, in bed. <strong>539</strong> said they had no one to tell.</p>
+</div>
+
+<div data-b-class="s1" data-s="1" data-hp="100">
+<blockquote class="quote">“It's me being tired, bored, alone, usually at night, and having my phone right next to me.”<cite>From a public post we read</cite></blockquote>
+</div>
+
+<div data-b-class="s2" data-s="2" data-hp="100">
+<div class="lust-laugh" aria-hidden="true">
+<span class="ha a">HA</span><span class="ha b">HA</span><span class="ha c">HA</span>
+<img src="assets/lust-grin.webp" alt="">
+</div>
+</div>
+
+<div data-b-class="s3" data-s="3" data-hp="85">
+<h2 class="disp h2">Get matched with someone who gets it.</h2>
+<p class="lede">Your partner is matched on what matters. Behind the two of you sits a small group of 4 to 6, your assists. If your partner goes quiet, an assist steps in, and after a week you can get rematched.</p>
+<div class="card">
+<img class="card-mascot" src="assets/freed-wave.webp" alt="">
+<div class="card-h"><span class="tag"><b>Player 2 has joined</b></span></div>
+<div class="igrid">
+<div class="it"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="14" cy="12" r="6.5" fill="url(#gA)"></circle><path d="M3 35c0-6.5 5-11 11-11s11 4.5 11 11z" fill="url(#gA)"></path><circle cx="27" cy="13" r="5.5" fill="url(#gB)"></circle><path d="M19 35c0-6 3.6-10 8-10s9 4 9 10z" fill="url(#gB)"></path></svg><b>Same gender, always</b><span>Locked on purpose, for everyone's safety.</span></div>
+<div class="it"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="url(#gA)"></circle><path class="dk" d="M20 10v11l7 4"></path></svg><b>Your time zone</b><span>Read from your phone, so you're up at the same hours.</span></div>
+<div class="it"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2c1.6 10.5 7.5 16.4 18 18-10.5 1.6-16.4 7.5-18 18-1.6-10.5-7.5-16.4-18-18C12.5 18.4 18.4 12.5 20 2z" fill="url(#gA)"></path><circle cx="33" cy="7" r="3.5" fill="url(#gB)"></circle></svg><b>Same faith, if you want</b><span>Or no faith, if you'd rather. Your call.</span></div>
+<div class="it"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="11" width="22" height="18" rx="9" fill="url(#gB)"></rect><rect x="16" y="11" width="22" height="18" rx="9" fill="url(#gA)" opacity="0.92"></rect></svg><b>Or bring your own friend</b><span>He gets an invite link and you start on the same day.</span></div>
+</div>
+</div>
+</div>
+
+<div data-b-class="s4" data-s="4" data-hp="72">
+<div class="card">
+<div class="card-h"><span class="tag alt"><b>Your group: 4 to 6 assists</b></span></div>
+<div class="igrid">
+<div class="it"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="url(#gA)"></circle><circle cx="20" cy="8" r="5" fill="url(#gA)"></circle><circle cx="32" cy="8" r="5" fill="url(#gB)"></circle><circle cx="8" cy="20" r="5" fill="url(#gA)"></circle><circle cx="20" cy="20" r="5" fill="url(#gB)"></circle><circle cx="32" cy="20" r="5" fill="#22306E"></circle><circle cx="8" cy="32" r="5" fill="url(#gB)"></circle><circle cx="20" cy="32" r="5" fill="#22306E"></circle><circle cx="32" cy="32" r="5" fill="#22306E"></circle></svg><b>They answer when your partner can't</b><span>Press the urge button at 2 AM and someone still shows up.</span></div>
+<div class="it"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2l15 5.5v10.5c0 9.5-6.4 17-15 20-8.6-3-15-10.5-15-20V7.5z" fill="url(#gA)"></path><path class="dk" d="M13 20l5 5 9-10"></path></svg><b>Cover if your partner goes quiet</b><span>From day 3, an assist checks in with you instead.</span></div>
+<div class="it"><svg viewBox="0 0 40 40" aria-hidden="true"><path class="gs" stroke="url(#gA)" d="M32 15A13 13 0 0 0 8.5 11"></path><path class="gs" stroke="url(#gA)" d="M8 5v7h7"></path><path class="gs" stroke="url(#gB)" d="M8 25a13 13 0 0 0 23.5 4"></path><path class="gs" stroke="url(#gB)" d="M32 35v-7h-7"></path></svg><b>Rematch after a week</b><span>Keep waiting, or get a new partner. No blame either way.</span></div>
+</div>
+</div>
+</div>
+
+<div data-b-class="s5" data-s="5" data-hp="60">
+<h2 class="disp h2">When it hits, hit back together.</h2>
+<p class="lede">Press the urge button. Log it, message your partner, ride it out. If your partner can't answer, someone from your group does. Try it.</p>
+<div class="combo">
+<div class="panel">
+<ul class="chk">
+<li data-b-class="row1"><i><svg class="ic" width="14" height="14" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></i>Log the urge</li>
+<li data-b-class="row2"><i><svg class="ic" width="14" height="14" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></i>Message your partner</li>
+<li data-b-class="row3"><i><svg class="ic" width="14" height="14" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></i>Ride it out together</li>
+</ul>
+<div class="chat">
+<div data-b-class="b1">Rough one tonight. You up?</div>
+<div data-b-class="b2">I'm here. Put the phone down a sec and talk to me.</div>
+</div>
+<p class="status" aria-live="polite"><span data-t="status"></span></p>
+<button type="button" class="gbtn" data-on-click="advance"><span data-t="btnLabel"></span></button>
+<p class="note">No answer from your partner? Someone from your group picks it up.</p>
+</div>
+<div class="ring" aria-hidden="true">
+<div class="ring-hp"><span class="nm">Lust</span><span data-b-class="ringCls"><span class="ghost"></span><span class="fill"></span></span></div>
+<div data-b-class="hitsCls"><span data-t="hitsText"></span><small><span data-t="hitsSub"></span></small></div>
+<div data-b-class="foeCls"><img src="assets/lust-full.webp" alt=""></div>
+<div data-b-class="allyCls"><img class="ip" src="assets/freed-punch.webp" alt=""><img class="ik" src="assets/freed-kick.webp" alt=""></div>
+<div data-b-class="koCls">K.O.</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="wrap sec" data-hp="45">
+<h2 class="disp h2">Daily quest: check in. Both of you.</h2>
+<p class="lede">Every night you each send a few honest lines. A together day only counts when you both do. Miss a night and it pauses. No red screens, no shame.</p>
+<div class="quest">
+<div class="q-main">
+<div class="flame-row">
+<svg data-b-class="flameCls" viewBox="0 0 64 80" aria-hidden="true"><circle class="em" cx="22" cy="26" r="2.6"></circle><circle class="em e2" cx="42" cy="22" r="2.2"></circle><circle class="em e3" cx="33" cy="14" r="2"></circle><path class="fo" d="M30 2c3 12 15 17 21 29 6 13 3 30-8 39-6 5-14 7-22 4C9 70 3 59 5 46c1-9 6-15 10-21 1 7 5 11 9 12-3-11-1-24 6-35z" fill="url(#gF)"></path><path class="fi" d="M32 30c2 8 10 12 12 21 2 9-4 18-12 19-8 1-15-6-14-15 1-6 4-9 7-12 0 4 2 6 4 7-1-7 0-14 3-20z" fill="url(#gF2)"></path><ellipse class="fc" cx="31" cy="58" rx="6" ry="8" fill="#FFF3E8"></ellipse></svg>
+<div class="count"><b class="tnum" aria-live="polite"><span data-t="days"></span></b><span>Together days</span></div>
+</div>
+<div class="week">
+<div class="days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span class="td">Sat</span><span>Sun</span></div>
+<div data-b-class="pillCls"><span class="pill-fill"></span><span class="slots"><span data-b-class="slots.0.cls"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" style="stroke-width:3.2"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="slots.1.cls"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" style="stroke-width:3.2"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="slots.2.cls"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" style="stroke-width:3.2"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="slots.3.cls"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" style="stroke-width:3.2"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="slots.4.cls"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" style="stroke-width:3.2"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="slots.5.cls"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" style="stroke-width:3.2"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="slots.6.cls"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" style="stroke-width:3.2"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></span></div>
+</div>
+<div class="q-act">
+<button type="button" class="gbtn" data-on-click="checkIn" data-b-disabled="qBusy"><span data-t="qLabel"></span></button>
+<span class="status" aria-live="polite"><span data-t="qStatus"></span></span>
+</div>
+</div>
+<div class="q-side">
+<img src="assets/freed-phone.webp" alt="">
+<div class="who">
+<span data-b-class="youChip"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="13" r="8" fill="url(#gA)"></circle><path d="M5 38c0-8 6.5-13.5 15-13.5S35 30 35 38z" fill="url(#gA)"></path></svg>You</span>
+<span data-b-class="themChip"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="13" r="8" fill="url(#gB)"></circle><path d="M5 38c0-8 6.5-13.5 15-13.5S35 30 35 38z" fill="url(#gB)"></path></svg>Partner<span data-if="waiting" hidden><span class="typing"><i></i><i></i><i></i></span></span></span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="wrap sec" data-hp="30">
+<div class="two">
+<div>
+<h2 class="disp h2">I'm Arman. I'm in it too.</h2>
+<div class="story-txt">
+<p>I tried to quit alone more times than I can count. I never got past day 4.</p>
+<p>Then a friend and I did it together. We logged every urge, sent each other the logs, and called when it got bad. I am on a 100-day streak, and for the first time it feels easy.</p>
+<p>So I'm building In It: a partner who shows up every night, and a group that covers when he can't.</p>
+<p class="sign">Arman, founder</p>
+</div>
+</div>
+<div data-b-class="runsCls" data-k="runs">
+<div class="run solo">
+<div class="flame-row">
+<svg class="flame" viewBox="0 0 64 80" aria-hidden="true"><path d="M30 2c3 12 15 17 21 29 6 13 3 30-8 39-6 5-14 7-22 4C9 70 3 59 5 46c1-9 6-15 10-21 1 7 5 11 9 12-3-11-1-24 6-35z" fill="url(#gG)"></path><ellipse cx="31" cy="58" rx="6" ry="8" fill="#5A6499"></ellipse></svg>
+<div class="count"><b class="tnum"><span data-t="soloN"></span></b><span>Day streak, alone</span></div>
+</div>
+<div class="pill sm"><span class="pill-fill"></span><span class="slots"><span data-b-class="solo.0.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="solo.1.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="solo.2.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="solo.3.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="solo.4.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="solo.5.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="solo.6.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></span></div>
+<p>My best in 10 to 50 tries.</p>
+</div>
+<div class="run coop">
+<div class="flame-row">
+<svg data-b-class="coopFlame" viewBox="0 0 64 80" aria-hidden="true"><circle class="em" cx="22" cy="26" r="2.6"></circle><circle class="em e2" cx="42" cy="22" r="2.2"></circle><circle class="em e3" cx="33" cy="14" r="2"></circle><path class="fo" d="M30 2c3 12 15 17 21 29 6 13 3 30-8 39-6 5-14 7-22 4C9 70 3 59 5 46c1-9 6-15 10-21 1 7 5 11 9 12-3-11-1-24 6-35z" fill="url(#gF)"></path><path class="fi" d="M32 30c2 8 10 12 12 21 2 9-4 18-12 19-8 1-15-6-14-15 1-6 4-9 7-12 0 4 2 6 4 7-1-7 0-14 3-20z" fill="url(#gF2)"></path><ellipse class="fc" cx="31" cy="58" rx="6" ry="8" fill="#FFF3E8"></ellipse></svg>
+<div class="count"><b class="tnum"><span data-t="coopN"></span></b><span>Day streak, with a friend</span></div>
+</div>
+<div class="pill sm"><span class="pill-fill"></span><span class="slots"><span data-b-class="coop.0.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="coop.1.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="coop.2.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="coop.3.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="coop.4.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="coop.5.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span data-b-class="coop.6.cls"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" style="stroke-width:3.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></span></div>
+<p>One try. Still going.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="wrap sec" data-hp="15">
+<h2 class="disp h2">Nobody has to know.</h2>
+<p class="lede">In It is built for men who can't tell anyone yet.</p>
+<ul class="rules">
+<li><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><div><b>Avatars, never photos</b><span>Your face and real name stay out of it.</span></div></li>
+<li><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"></path><path d="M4 12h10"></path><path d="M4 18h7"></path><path d="M15 15l6 6"></path><path d="M21 15l-6 6"></path></svg><div><b>No spectators</b><span>No public feed, no leaderboard.</span></div></li>
+<li><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18"></path><path d="M10.6 5.1A10.9 10.9 0 0 1 12 5c5 0 9 4.5 10 7a13 13 0 0 1-2.6 3.7"></path><path d="M6.6 6.6C4.4 8 2.7 10.2 2 12c1 2.5 5 7 10 7a10 10 0 0 0 4.4-1"></path></svg><div><b>Your streak stays yours</b><span>Your partner never sees it.</span></div></li>
+<li><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"></path></svg><div><b>A slip stays private</b><span>The app tells no one. You decide what to share.</span></div></li>
+<li><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg><div><b>A quiet app</b><span>Neutral icon. Notifications never say what it's for.</span></div></li>
+</ul>
+</section>
+
+<section class="fin" data-hp="0">
+<div class="wrap fin-in">
+<h2 class="disp h2">Player 2 is waiting.</h2>
+<p class="lede">The first test is small, and it's free. Join the waitlist to be one of the first pairs.</p>
+<a class="gbtn" href="https://tally.so/r/WJrEle" target="_blank" rel="noopener">Join the waitlist</a>
+</div>
+<div class="fin-scene" aria-hidden="true">
+<img class="ls" src="assets/lust-shock.webp" alt="">
+<img class="fr" src="assets/freed-cheer.webp" alt="">
+<span class="ko-big">K.O.</span>
+</div>
+<footer class="foot">
+<a class="brand" href="#top"><img src="assets/logo.webp" alt=""><span>In It</span></a>
+<span>Built by Arman, who's in it too.</span>
+<span>© 2026 In It</span>
+</footer>
+</section>
+
+</div>
+<script>
+class DCLogic {
+  constructor(props) { this.props = props || {}; this.state = {}; }
+  setState(u) { Object.assign(this.state, typeof u === 'function' ? u(this.state) : u); if (this._render) this._render(); }
+}
+
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { active: 0, seen: {}, combo: 0, flip: 0, quest: 0, qflip: 0, runs: false, soloN: 0, coopN: 0, hp: 100 };
+this.root = null;
+this.vis = {};
+this.hpVis = {};
+this.timers = [];
+this.raf = 0;
+this.reduce = false;
+}
+componentDidMount() {
+const root = this.root;
+const all = { 0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1 };
+if (!root || !('IntersectionObserver' in window)) { this.setState({ seen: all, runs: true, soloN: 4, coopN: 100 }); return; }
+this.reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+if (this.reduce) this.setState({ seen: all });
+const th = [];
+for (let i = 0; i <= 10; i++) th.push(i / 10);
+// Round steps: reveal once, and the step taking the most screen is the active round.
+this.io = new IntersectionObserver((entries) => {
+const seen = Object.assign({}, this.state.seen);
+let changed = false;
+entries.forEach((en) => {
+const k = en.target.getAttribute('data-s');
+this.vis[k] = en.isIntersecting ? en.intersectionRect.height : 0;
+if (en.isIntersecting && en.intersectionRatio > 0.2 && !seen[k]) { seen[k] = 1; changed = true; }
+});
+let best = this.state.active, bestV = 0;
+Object.keys(this.vis).forEach((k) => { if (this.vis[k] > bestV) { bestV = this.vis[k]; best = Number(k); } });
+if (changed || best !== this.state.active) this.setState({ seen: seen, active: best });
+}, { threshold: th });
+root.querySelectorAll('[data-s]').forEach((el) => this.io.observe(el));
+// Top Lust bar: the furthest milestone on screen sets the health, so it drains as you scroll down.
+const marks = Array.prototype.slice.call(root.querySelectorAll('[data-hp]'));
+this.io3 = new IntersectionObserver((entries) => {
+entries.forEach((en) => {
+const i = marks.indexOf(en.target);
+const need = Math.min(140, en.boundingClientRect.height * 0.5);
+this.hpVis[i] = en.isIntersecting && en.intersectionRect.height >= need;
+});
+let far = -1;
+Object.keys(this.hpVis).forEach((i) => { if (this.hpVis[i] && Number(i) > far) far = Number(i); });
+if (far < 0) return;
+const hp = Number(marks[far].getAttribute('data-hp'));
+if (hp !== this.state.hp) this.setState({ hp: hp });
+}, { threshold: th });
+marks.forEach((el) => this.io3.observe(el));
+// Founder streaks: fill and count up once they are well in view.
+this.io2 = new IntersectionObserver((entries) => {
+entries.forEach((en) => { if (en.isIntersecting && !this.state.runs) this.startRuns(); });
+}, { threshold: 0.5 });
+const runsEl = root.querySelector('[data-k="runs"]');
+if (runsEl) this.io2.observe(runsEl);
+this.timers.push(setTimeout(() => { if (!Object.keys(this.vis).length) this.setState({ seen: all, runs: true, soloN: 4, coopN: 100 }); }, 2500));
+}
+componentWillUnmount() {
+if (this.io) this.io.disconnect();
+if (this.io2) this.io2.disconnect();
+if (this.io3) this.io3.disconnect();
+if (this.raf) cancelAnimationFrame(this.raf);
+this.timers.forEach((t) => clearTimeout(t));
+}
+startRuns() {
+if (!window.requestAnimationFrame) { this.setState({ runs: true, soloN: 4, coopN: 100 }); return; }
+this.setState({ runs: true });
+const t0 = performance.now();
+const ease = (t) => 1 - Math.pow(1 - t, 3);
+const tick = (now) => {
+const el = now - t0;
+const ps = Math.min(1, el / 900);
+const pc = Math.min(1, Math.max(0, (el - 300) / 1500));
+const soloN = Math.round(ease(ps) * 4);
+const coopN = Math.round(ease(pc) * 100);
+if (soloN !== this.state.soloN || coopN !== this.state.coopN) this.setState({ soloN: soloN, coopN: coopN });
+if (pc < 1) this.raf = requestAnimationFrame(tick);
+};
+this.raf = requestAnimationFrame(tick);
+}
+checkIn() {
+if (this.state.quest === 2) { this.setState({ quest: 0 }); return; }
+if (this.state.quest === 1) return;
+this.setState({ quest: 1 });
+this.timers.push(setTimeout(() => this.setState({ quest: 2, qflip: this.state.qflip ? 0 : 1 }), 1600));
+}
+renderVals() {
+const st = this.state;
+const a = st.active;
+const c = st.combo;
+const seen = st.seen || {};
+const round = a <= 2 ? 0 : a <= 4 ? 1 : 2;
+const ri = (n) => (n === round ? 'ri on' : n < round ? 'ri done' : 'ri');
+const row = (n) => (c >= n ? 'row done' : c === n - 1 ? 'row now' : 'row');
+const ab = st.flip ? 'A' : 'B';
+const comboHp = [100, 66, 33, 0][c];
+const step = (k, extra) => 'step' + (extra ? ' ' + extra : '') + (seen[k] ? ' seen' : '');
+const doneDays = st.quest === 2 ? 6 : 5;
+const slots = Array.from({ length: 7 }, (_, i) => {
+let cls = 'sl';
+if (i < 5) cls = 'sl done';
+if (i === 5) cls = st.quest === 2 ? 'sl done today' : st.quest === 1 ? 'sl half today' : 'sl today';
+return { cls: cls };
+});
+const pillSlots = (lit) => Array.from({ length: 7 }, (_, i) => ({ cls: i < lit ? 'sl done' : 'sl' }));
+return {
+setRoot: (el) => { this.root = el; },
+hudCls: 'bar r hp' + st.hp,
+hudName: st.hp === 0 ? 'Lust · K.O.' : 'Lust',
+progCls: 'prog pr' + a,
+ri0: ri(0), ri1: ri(1), ri2: ri(2),
+s0: step(0, 'tight first'), s1: step(1, 'tight'), s2: step(2, 'tight'),
+s3: step(3, 'tall'), s4: step(4), s5: step(5, 'tall'),
+row1: row(1), row2: row(2), row3: row(3),
+b1: c >= 2 ? 'bub me show' : 'bub me',
+b2: c >= 2 ? 'bub them show' : 'bub them',
+btnLabel: ['I have an urge', 'Message my partner', 'Ride it out together', 'Run it again'][c],
+status: ['Lust is loud right now.', 'Logged at 11:13 PM. Lust takes a hit.', 'Your partner answered. Freed jumps in.', 'It passed. K.O.'][c],
+advance: () => this.setState({ combo: (c + 1) % 4, flip: st.flip ? 0 : 1 }),
+ringCls: 'track hp' + comboHp,
+hitsCls: c === 0 ? 'hits' : 'hits p' + ab,
+hitsText: c === 0 ? 'Ready' : c + (c === 1 ? ' hit' : ' hits'),
+hitsSub: c === 0 ? 'Press the button' : c === 3 ? 'Combo complete' : 'Combo',
+foeCls: c === 3 ? 'foe down' : c === 0 ? 'foe' : 'foe hit' + ab,
+allyCls: c === 2 ? 'ally punch' : c === 3 ? 'ally kick' : 'ally',
+koCls: c === 3 ? 'kostamp in' : 'kostamp',
+days: st.quest === 2 ? 13 : 12,
+flameCls: st.quest === 2 ? 'flame burn b' + (st.qflip ? 'A' : 'B') : 'flame burn',
+pillCls: 'pill d' + doneDays,
+slots: slots,
+checkIn: () => this.checkIn(),
+qBusy: st.quest === 1,
+qLabel: ['Check in for tonight', 'Checked in', 'Reset demo'][st.quest],
+qStatus: ['Tonight is still open.', 'Waiting for your partner...', 'Your partner checked in too. Together day 13.'][st.quest],
+waiting: st.quest === 1,
+youChip: st.quest >= 1 ? 'chip ok' : 'chip',
+themChip: st.quest === 2 ? 'chip ok' : 'chip',
+runsCls: st.runs ? 'runs seen' : 'runs',
+coopFlame: st.runs ? 'flame burn' : 'flame',
+soloN: st.soloN,
+coopN: st.coopN,
+solo: pillSlots(4),
+coop: pillSlots(7)
+};
+}
+}
+
+(function () {
+  var root = document.querySelector('[data-root]');
+  var c = new Component({});
+  var vals = {};
+  function get(path) { return path.split('.').reduce(function (o, k) { return o == null ? o : o[k]; }, vals); }
+  var nodes = {
+    cls: root.querySelectorAll('[data-b-class]'),
+    dis: root.querySelectorAll('[data-b-disabled]'),
+    txt: root.querySelectorAll('[data-t]'),
+    ifs: root.querySelectorAll('[data-if]')
+  };
+  c._render = function () {
+    vals = c.renderVals();
+    nodes.cls.forEach(function (el) { var v = get(el.getAttribute('data-b-class')); if (el.getAttribute('class') !== v) el.setAttribute('class', v); });
+    nodes.dis.forEach(function (el) { el.disabled = !!get(el.getAttribute('data-b-disabled')); });
+    nodes.txt.forEach(function (el) { var v = String(get(el.getAttribute('data-t'))); if (el.textContent !== v) el.textContent = v; });
+    nodes.ifs.forEach(function (el) { el.hidden = !get(el.getAttribute('data-if')); });
+  };
+  root.querySelectorAll('[data-on-click]').forEach(function (el) {
+    el.addEventListener('click', function () { var f = vals[el.getAttribute('data-on-click')]; if (typeof f === 'function') f(); });
+  });
+  c._render();
+  if (vals.setRoot) vals.setRoot(root);
+  if (c.componentDidMount) c.componentDidMount();
+})();
+</script>
+</body>
+</html>
